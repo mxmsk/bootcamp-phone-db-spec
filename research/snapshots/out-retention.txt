@@ -1,0 +1,34 @@
+Assumptions: page 16 KiB, file 40 GB, pages changed by one write: 8
+Upper bound on retention = W * T * 8 * 16 KiB = W * T * 128 KiB
+(upper bound: repeated edits of the same pages and shared upper tree levels are not accounted for; not more than the file size)
+
+Retention of old page versions while one snapshot is alive (W - committed writes per second):
+snapshot                                        W=1     W=10    W=100   W=1000  
+search query, 30 s ceiling                      4 MiB    38 MiB   375 MiB  3.7 GiB  
+stream by number, 120 s ceiling                 15 MiB   150 MiB  1.5 GiB  14.6 GiB 
+copy of 40 GB at 32 MiB/s (19.9 min)            149 MiB  1.5 GiB  14.6 GiB 37.3 GiB 
+copy of 40 GB at 64 MiB/s (9.9 min)             75 MiB   745 MiB  7.3 GiB  37.3 GiB 
+copy of 40 GB at 128 MiB/s (5.0 min)            37 MiB   373 MiB  3.6 GiB  36.4 GiB 
+copy of 40 GB at 256 MiB/s (2.5 min)            19 MiB   186 MiB  1.8 GiB  18.2 GiB 
+
+Serving by number: worst-case history (2,967,164 records, ~300 MB, ADR 0035 item 6) and snapshot lifetime
+  client   10 Mbit/s:  240.0 s; fits in 120 s: no
+  client  100 Mbit/s:   24.0 s; fits in 120 s: yes
+  client 1000 Mbit/s:    2.4 s; fits in 120 s: yes
+  minimum client rate for 120 s: 20.0 Mbit/s
+
+Rebuild of the order index from names for 10^8 records (Q-82). Sort key speed: keybench measurement,
+1 thread 1.96 M names/s, 4 threads 8.42 M/s, 8 threads 14.8 M/s (Apple M3 Pro; average key 24.2 bytes).
+  key construction only, 1 threads:   51.0 s
+  key construction only, 4 threads:   11.9 s
+  key construction only, 8 threads:    6.8 s
+  data read ~6.0 GB, index write ~4.7 GB (assumption: 60 bytes of data/record, key+date+number, overhead 1.3)
+  I/O at  200 MB/s (external sort, 2 extra passes):    101 s
+  I/O at  500 MB/s (external sort, 2 extra passes):     40 s
+  I/O at 2000 MB/s (external sort, 2 extra passes):     10 s
+  total for the order index only: ~20 s (fast disk, 8 threads) ... ~2.5 min (200 MB/s disk, 1 thread: 51 s keys + 101 s I/O);
+  word index and exact-search index -
+  separate, not measured (case folding and UAX #29 over ~2-4 words per name): add during implementation.
+
+Page checksum while copying: crcbench measurement (crc32c, 1 thread) 8.4-12.2 GiB/s;
+  40 GB => 4 s on one thread, i.e. much less than the copy I/O (minutes); not a bottleneck.

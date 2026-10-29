@@ -1,0 +1,43 @@
+Han: 李雷                              | "李"* | "雷"*
+Han with space: 李雷 韩梅梅               | "李"* | "雷"* | " " | "韩"* | "梅"* | "梅"*
+hiragana+kanji: こんにちは世界              | "こ"* | "ん"* | "に"* | "ち"* | "は"* | "世"* | "界"*
+katakana+kanji: 東京タワー                | "東"* | "京"* | "タワー"*
+Han+Latin: 李雷Smith                   | "李"* | "雷"* | "Smith"*
+Han+digit                            | "李"* | "雷"* | "2"*
+Hangul                               | "김철수"*
+Thai: Somchai สมชาย                  | "Somchai"* | " " | "ส"* | "ม"* | "ช"* | "า"* | "ย"*
+Thai: สวัสดี                         | "ส"* | "ว\u{e31}"* | "ส"* | "ด\u{e35}"*
+Lao: ສະບາຍດີ                         | "ສ"* | "ະ"* | "ບ"* | "າ"* | "ຍ"* | "ດ\u{eb5}"*
+Myanmar: မြန်မာ                      | "မြ"* | "န\u{103a}"* | "မာ"*
+Khmer                                | "ស\u{17bd}"* | "ស\u{17d2}"* | "ត\u{17b8}"*
+Tibetan: བཀྲ་ཤིས                     | "བཀ\u{fb2}"* | "་" | "ཤ\u{f72}ས"*
+Cyrillic+Latin: Annиван              | "Annиван"*
+apostrophe U+0027: O'Brien           | "O'Brien"*
+apostrophe U+2019: O’Brien           | "O’Brien"*
+apostrophe U+2018: O‘Brien           | "O‘Brien"*
+apostrophe at end: o'                | "o"* | "'"
+colon: Smith:John                    | "Smith:John"*
+middle dot U+00B7: Ann·Bob           | "Ann·Bob"*
+dot between letters: Smith.John      | "Smith.John"*
+dot between digits: 3.14             | "3.14"*
+comma between digits: 1,000          | "1,000"*
+digits and letters: A1 2B            | "A1"* | " " | "2B"*
+«_»: john_smith                      | "john_smith"*
+«_» alone                            | "_"
+«+» alone (Sm)                       | "+"*
+«$» alone (Sc)                       | "$"*
+emoji alone: 😀                       | "😀"*
+emoji in a name: Ann 😀               | "Ann"* | " " | "😀"*
+«C++»                                | "C"* | "+"* | "+"*
+U+200B alone (Cf)                    | "\u{200b}"
+U+0000 alone (Cc)                    | "\0"
+U+203F alone                         | "‿"
+hyphen: Anna-Maria                   | "Anna"* | "-" | "Maria"*
+only hyphen, space, apostrophe       | "-" | " " | "'"
+U+202F: Ann<U+202F>Smith             | "Ann\u{202f}Smith"*
+U+202F alone                         | "\u{202f}"
+TAB: Ann<TAB>Smith                   | "Ann"* | "\t" | "Smith"*
+«ё»+U+0308                           | "ё\u{308}"*
+emoji: ab😀cd                         | "ab"* | "😀"* | "cd"*
+space: Иван Петров                   | "Иван"* | " " | "Петров"*
+(* = word by the predicate: has a char outside Z*, P*, Cc, Cf)

@@ -1,0 +1,30 @@
+   Compiling icu_provider v2.4.0
+   Compiling icu_locale_fallback v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling icu_locale v2.4.0
+   Compiling icu_collator v2.4.0
+   Compiling icu_casemap v2.4.0
+   Compiling sortkey-check v0.1.0 (./research/records/sortkey-check)
+    Finished `release` profile [optimized] target(s) in 14.37s
+     Running `<tmp>/sk/release/sortkey-check`
+scalar values measured: 1110876
+max name bytes: 800
+max comparison-key bytes: 1000
+max sort-key bytes: 8513
+min sort-key bytes: 2
+top 10 by sort-key bytes (U+cp sortkey namebytes cmpbytes):
+U+FDFA 8513 600 600
+U+FDFB 3652 600 600
+U+321D 3645 600 600
+U+3313 3403 600 600
+U+1F1A9 3251 800 800
+U+321E 3239 600 600
+U+337F 3227 600 600
+U+334A 3204 600 600
+U+332B 3204 600 600
+U+3307 3203 600 600
+top 3 by comparison-key bytes:
+U+1FAF 1403 600 1000
+U+1FAE 1403 600 1000
+U+1FAD 1403 600 1000

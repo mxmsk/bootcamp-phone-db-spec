@@ -1,0 +1,53 @@
+schema: spec-driven
+
+context: |
+  Project: the "Names and Phones" database. The original task statement (the only source of requirements):
+  - It must be a good database
+  - It must have a Visual User Interface and a programmatic API
+  - It must store Names and Phones
+  - It must be possible to search Names by Phone number
+  - It must be possible to search Phones by Name
+  - It must reliably store many records
+  - Written from scratch in Rust
+  Primary sources in the project: `docs/source/brief.md` (the brief);
+  owner decisions made after the brief — `docs/owner-decisions.md` (OD-x).
+  Specification rules:
+  - Every requirement traces to a CUJ from the `user-journeys` capability or to an item of the original statement; an owner
+    decision restricting scope (`docs/owner-decisions.md`) is a valid trace for a requirement that
+    restricts scope (for example, X-3). A requirement without a trace is excess scope; a CUJ step without a requirement is a gap.
+  - Every decision is an ADR in `docs/adr/` (context, decision, alternatives with the reason for rejection, consequences, CUJ,
+    sources, label, status). Labels: [USER] — an owner decision; [OURS] — a project decision with a rationale;
+    [DEFAULT] — not confirmed by the owner, put to the owner.
+  - Every claim about the outside world is a verified reference (facts are in `facts.md` at the project root) or a label.
+  - The specification is written in English; the product's UI/CLI strings are in Russian.
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+# Keep general project documentation and discoverable codebase facts out.
+# Example:
+#   context: |
+#     Designs and tasks must cover Windows, macOS, and Linux
+#     Write all artifacts in Spanish
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

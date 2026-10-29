@@ -1,0 +1,8 @@
+[package]
+name = "crcbench"
+version = "0.1.0"
+edition = "2021"
+
+# Page checksum speed during copying (ADR 0057): an order of magnitude, not a crate choice for the product.
+[dependencies]
+crc32c = "=0.6.8"

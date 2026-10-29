@@ -1,0 +1,22 @@
+mismatches on chars added in Unicode 18.0 (DerivedAge 18.0): 558
+mismatches on chars older than 18.0 (script, Word_Break from icu_properties; WordBreak(0)=Other, (9)=Extend, (1)=ALetter):
+  Han            WordBreak(0)    103346  first U+2E80
+  Hiragana       WordBreak(0)       381  first U+3041
+  Myanmar        WordBreak(0)       125  first U+1000
+  New_Tai_Lue    WordBreak(0)        72  first U+1980
+  Tai_Tham       WordBreak(0)        67  first U+1A20
+  Tai_Viet       WordBreak(0)        63  first U+AA80
+  Myanmar        WordBreak(9)        62  first U+102B
+  Thai           WordBreak(0)        57  first U+0E01
+  Lao            WordBreak(0)        56  first U+0E81
+  Khmer          WordBreak(0)        54  first U+1780
+  Tai_Tham       WordBreak(9)        39  first U+1A55
+  Ahom           WordBreak(0)        37  first U+11700
+  Tai_Le         WordBreak(0)        35  first U+1950
+  Khmer          WordBreak(9)        33  first U+17B4
+  Lao            WordBreak(9)        17  first U+0EB1
+  Thai           WordBreak(9)        16  first U+0E31
+  Ahom           WordBreak(9)        15  first U+1171D
+  Tai_Viet       WordBreak(9)         9  first U+AAB0
+  Han            WordBreak(1)         3  first U+3005
+  Han            WordBreak(9)         2  first U+16FF0

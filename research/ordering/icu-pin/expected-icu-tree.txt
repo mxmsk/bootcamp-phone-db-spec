@@ -1,0 +1,15 @@
+icu_casemap v2.4.0
+icu_casemap_data v2.4.0
+icu_collator v2.4.0
+icu_collator_data v2.4.0
+icu_collections v2.4.0
+icu_locale v2.4.0
+icu_locale_core v2.4.0
+icu_locale_data v2.4.0
+icu_locale_fallback v2.4.0
+icu_locale_fallback_data v2.4.0
+icu_normalizer v2.4.0
+icu_normalizer_data v2.4.0
+icu_properties v2.4.0
+icu_properties_data v2.4.0
+icu_provider v2.4.0

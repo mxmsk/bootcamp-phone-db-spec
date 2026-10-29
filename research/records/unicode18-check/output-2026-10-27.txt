@@ -1,0 +1,16 @@
+    Finished `release` profile [optimized] target(s) in 0.07s
+     Running `<tmp>/t18/release/unicode18-check <tmp>/ucd`
+PropList header: # PropList-18.0.0.txt
+White_Space: PropList=25 ICU4X=25 equal=true
+U+2010: name=HYPHEN gc=Pd decomp=""
+U+2011: name=NON-BREAKING HYPHEN gc=Pd decomp="<noBreak> 2010"
+U+2012: name=FIGURE DASH gc=Pd decomp=""
+U+2212: name=MINUS SIGN gc=Sm decomp=""
+U+002D: name=HYPHEN-MINUS gc=Pd decomp=""
+NFC changes whitespace: ["U+2000->U+2002", "U+2001->U+2003"]
+non-whitespace whose NFC/NFD contains whitespace: 0
+trim(NFC(s)) == NFC(trim(s)): strings checked 85404800, mismatches 0
+NFC is idempotent on all scalar values
+max scalar values after NFC of one scalar value: 3
+max NFD length of one scalar value: 4 (U+1F82)
+fold+NFC of one char: max 3 scalar values (U+FB03); max byte growth 3.000x (U+1D160)

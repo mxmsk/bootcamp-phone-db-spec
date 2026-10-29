@@ -1,0 +1,1 @@
+UAX #29 rules on icu_properties data: 1944/1944 matched WordBreakTest-18.0.0

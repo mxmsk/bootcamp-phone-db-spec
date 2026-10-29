@@ -1,0 +1,16 @@
+    Finished `release` profile [optimized] target(s) in 0.66s
+     Running `target/release/crc-bench`
+check vectors on "123456789": crc32c crate 0xe3069283 (expect 0xe3069283), crc ISCSI 0xe3069283, crc32fast 0xcbf43926 (IEEE, expect 0xcbf43926)
+vector: CRC-32C(16384 zero bytes) = 0x94640b85; CRC-32C(bytes i%251, first 4 zeroed) = 0x1d167853
+crc32c (hw)                  page   4096 B:     313 ns/page,  12.18 GiB/s (sink 0)
+crc32fast (IEEE)             page   4096 B:     389 ns/page,   9.81 GiB/s (sink 0)
+crc Table<16> ISCSI          page   4096 B:     807 ns/page,   4.73 GiB/s (sink 0)
+crc32c (hw)                  page   8192 B:     356 ns/page,  21.44 GiB/s (sink 0)
+crc32fast (IEEE)             page   8192 B:     564 ns/page,  13.53 GiB/s (sink 0)
+crc Table<16> ISCSI          page   8192 B:    1692 ns/page,   4.51 GiB/s (sink 0)
+crc32c (hw)                  page  16384 B:     672 ns/page,  22.72 GiB/s (sink 0)
+crc32fast (IEEE)             page  16384 B:     818 ns/page,  18.65 GiB/s (sink 0)
+crc Table<16> ISCSI          page  16384 B:    3304 ns/page,   4.62 GiB/s (sink 0)
+crc32c (hw)                  page  32768 B:    1176 ns/page,  25.96 GiB/s (sink 0)
+crc32fast (IEEE)             page  32768 B:    1492 ns/page,  20.45 GiB/s (sink 0)
+crc Table<16> ISCSI          page  32768 B:    6648 ns/page,   4.59 GiB/s (sink 0)

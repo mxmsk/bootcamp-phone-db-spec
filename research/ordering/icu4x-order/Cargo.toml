@@ -1,0 +1,8 @@
+[package]
+name = "icu4x-order"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+icu_collator = "=2.4.0"
+icu_locale = "=2.4.0"

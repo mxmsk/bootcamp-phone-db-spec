@@ -1,0 +1,2 @@
+new_for_non_complex_scripts: 1944/1944 matched WordBreakTest-18.0.0
+new_auto: 1944/1944 matched WordBreakTest-18.0.0

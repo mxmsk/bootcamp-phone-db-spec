@@ -1,0 +1,66 @@
+script | tertiary+nonignorable (default) | Анна < Бобр < Яков < Ann < Zed
+yo-tail | tertiary+nonignorable (default) | Её < Еж < Ёж < Ежи < Жук
+yo-pair | tertiary+nonignorable (default) | Елка < ЕЛКА < Ёлка
+case | tertiary+nonignorable (default) | анна < Анна < АННА < Антон
+case-yo | tertiary+nonignorable (default) | Её < Еж < ёж < Ёж < Ежи
+punct | tertiary+nonignorable (default) | Ann Zed < Ann-Zed < Anna < AnnZed
+punct2 | tertiary+nonignorable (default) | Ann Smith < Ann-Smith < AnnSmith
+numeric | tertiary+nonignorable (default) | Ann 10 < Ann 2
+numeric2 | tertiary+nonignorable (default) | Ann 1 < Ann 10 < Ann 2
+invisible | tertiary+nonignorable (default) | Ann = A­nn
+smith | tertiary+nonignorable (default) | Ann Smith < Bob Smith
+script | secondary | Анна < Бобр < Яков < Ann < Zed
+yo-tail | secondary | Её < Еж < Ёж < Ежи < Жук
+yo-pair | secondary | ЕЛКА = Елка < Ёлка
+case | secondary | АННА = Анна = анна < Антон
+case-yo | secondary | Её < Еж < Ёж = ёж < Ежи
+punct | secondary | Ann Zed < Ann-Zed < Anna < AnnZed
+punct2 | secondary | Ann Smith < Ann-Smith < AnnSmith
+numeric | secondary | Ann 10 < Ann 2
+numeric2 | secondary | Ann 1 < Ann 10 < Ann 2
+invisible | secondary | Ann = A­nn
+smith | secondary | Ann Smith < Bob Smith
+script | primary | Анна < Бобр < Яков < Ann < Zed
+yo-tail | primary | Её < Ёж = Еж < Ежи < Жук
+yo-pair | primary | Ёлка = ЕЛКА = Елка
+case | primary | АННА = Анна = анна < Антон
+case-yo | primary | Её < Ёж = Еж = ёж < Ежи
+punct | primary | Ann Zed < Ann-Zed < Anna < AnnZed
+punct2 | primary | Ann Smith < Ann-Smith < AnnSmith
+numeric | primary | Ann 10 < Ann 2
+numeric2 | primary | Ann 1 < Ann 10 < Ann 2
+invisible | primary | Ann = A­nn
+smith | primary | Ann Smith < Bob Smith
+script | tertiary+shifted | Анна < Бобр < Яков < Ann < Zed
+yo-tail | tertiary+shifted | Её < Еж < Ёж < Ежи < Жук
+yo-pair | tertiary+shifted | Елка < ЕЛКА < Ёлка
+case | tertiary+shifted | анна < Анна < АННА < Антон
+case-yo | tertiary+shifted | Её < Еж < ёж < Ёж < Ежи
+punct | tertiary+shifted | Anna < Ann Zed = Ann-Zed = AnnZed
+punct2 | tertiary+shifted | Ann Smith = Ann-Smith = AnnSmith
+numeric | tertiary+shifted | Ann 10 < Ann 2
+numeric2 | tertiary+shifted | Ann 1 < Ann 10 < Ann 2
+invisible | tertiary+shifted | Ann = A­nn
+smith | tertiary+shifted | Ann Smith < Bob Smith
+script | tertiary+case_first upper | Анна < Бобр < Яков < Ann < Zed
+yo-tail | tertiary+case_first upper | Её < Еж < Ёж < Ежи < Жук
+yo-pair | tertiary+case_first upper | ЕЛКА < Елка < Ёлка
+case | tertiary+case_first upper | АННА < Анна < анна < Антон
+case-yo | tertiary+case_first upper | Её < Еж < Ёж < ёж < Ежи
+punct | tertiary+case_first upper | Ann Zed < Ann-Zed < Anna < AnnZed
+punct2 | tertiary+case_first upper | Ann Smith < Ann-Smith < AnnSmith
+numeric | tertiary+case_first upper | Ann 10 < Ann 2
+numeric2 | tertiary+case_first upper | Ann 1 < Ann 10 < Ann 2
+invisible | tertiary+case_first upper | Ann = A­nn
+smith | tertiary+case_first upper | Ann Smith < Bob Smith
+script | tertiary+numeric | Анна < Бобр < Яков < Ann < Zed
+yo-tail | tertiary+numeric | Её < Еж < Ёж < Ежи < Жук
+yo-pair | tertiary+numeric | Елка < ЕЛКА < Ёлка
+case | tertiary+numeric | анна < Анна < АННА < Антон
+case-yo | tertiary+numeric | Её < Еж < ёж < Ёж < Ежи
+punct | tertiary+numeric | Ann Zed < Ann-Zed < Anna < AnnZed
+punct2 | tertiary+numeric | Ann Smith < Ann-Smith < AnnSmith
+numeric | tertiary+numeric | Ann 2 < Ann 10
+numeric2 | tertiary+numeric | Ann 1 < Ann 2 < Ann 10
+invisible | tertiary+numeric | Ann = A­nn
+smith | tertiary+numeric | Ann Smith < Bob Smith

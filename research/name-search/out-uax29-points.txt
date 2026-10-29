@@ -1,0 +1,55 @@
+Han                    UAX#29: "李"* | "雷"*
+                       ICU4X : "李雷"*
+Han with space         UAX#29: "李"* | "雷"* | " " | "韩"* | "梅"* | "梅"*
+                       ICU4X : "李雷"* | " " | "韩梅梅"*
+hiragana               UAX#29: "こ"* | "ん"* | "に"* | "ち"* | "は"*
+                       ICU4X : "こんにちは"*
+hiragana+kanji         UAX#29: "こ"* | "ん"* | "に"* | "ち"* | "は"* | "世"* | "界"*
+                       ICU4X : "こんにちは世界"*
+katakana               UAX#29: "コンピュータ"*
+                       ICU4X : "コンピュータ"*
+kanji+katakana         UAX#29: "東"* | "京"* | "タワー"*
+                       ICU4X : "東京"* | "タワー"*
+Han+Latin              UAX#29: "李"* | "雷"* | "Smith"*
+                       ICU4X : "李雷"* | "Smith"*
+Han+digit              UAX#29: "李"* | "雷"* | "2"*
+                       ICU4X : "李雷"* | "2"*
+Hangul                 UAX#29: "김철수"*
+                       ICU4X : "김철수"*
+Thai                   UAX#29: "ส"* | "ว\u{e31}"* | "ส"* | "ด\u{e35}"* | "ค"* | "ร\u{e31}"* | "บ"*
+                       ICU4X : "สว\u{e31}สด\u{e35}คร\u{e31}บ"*
+Thai+Latin             UAX#29: "Somchai"* | " " | "ส"* | "ม"* | "ช"* | "า"* | "ย"*
+                       ICU4X : "Somchai"* | " " | "สมชาย"*
+Lao                    UAX#29: "ສ"* | "ະ"* | "ບ"* | "າ"* | "ຍ"* | "ດ\u{eb5}"*
+                       ICU4X : "ສະບາຍດ\u{eb5}"*
+Myanmar                UAX#29: "မြ"* | "န\u{103a}"* | "မာ"*
+                       ICU4X : "မြန\u{103a}မာ"*
+Myanmar 2              UAX#29: "မ"* | "င\u{103a}\u{1039}"* | "ဂ"* | "လာ"* | "ပါ"*
+                       ICU4X : "မင\u{103a}\u{1039}ဂလာပါ"*
+Khmer                  UAX#29: "ស\u{17bd}"* | "ស\u{17d2}"* | "ត\u{17b8}"*
+                       ICU4X : "ស\u{17bd}ស\u{17d2}ត\u{17b8}"*
+Tibetan                UAX#29: "བཀ\u{fb2}"* | "་" | "ཤ\u{f72}ས"*
+                       ICU4X : "བཀ\u{fb2}"* | "་" | "ཤ\u{f72}ས"*
+«_»                    UAX#29: "_"
+                       ICU4X : "_"
+john_smith             UAX#29: "john_smith"*
+                       ICU4X : "john_smith"*
+U+203F                 UAX#29: "‿"
+                       ICU4X : "‿"
+Ann<U+202F>Smith       UAX#29: "Ann\u{202f}Smith"*
+                       ICU4X : "Ann\u{202f}Smith"*
+U+202F alone           UAX#29: "\u{202f}"
+                       ICU4X : "\u{202f}"
+TAB between words      UAX#29: "Ann"* | "\t" | "Smith"*
+                       ICU4X : "Ann"* | "\t" | "Smith"*
+«ё»+U+0308 (NFC)       UAX#29: "ё\u{308}"*
+                       ICU4X : "ё\u{308}"*
+emoji                  UAX#29: "ab"* | "😀"* | "cd"*
+                       ICU4X : "ab"* | "😀"* | "cd"*
+only hyphen            UAX#29: "-" | " " | "'"
+                       ICU4X : "-" | " " | "'"
+O'Brien                UAX#29: "O'Brien"*
+                       ICU4X : "O'Brien"*
+colon                  UAX#29: "Smith:John"*
+                       ICU4X : "Smith:John"*
+(* = word by the predicate: has a char outside Z*, P*, Cc, Cf)

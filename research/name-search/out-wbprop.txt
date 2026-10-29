@@ -1,0 +1,9 @@
+李 Other
+雷 Other
+こ Other
+世 Other
+Thai ส Other
+Thai U+0E31 Extend
+コ Katakana
+Hebrew ש Hebrew_Letter
+code points >= U+0E00 and < U+F900 in WordBreakTest (CJK, Thai, kana): ['0x3031']

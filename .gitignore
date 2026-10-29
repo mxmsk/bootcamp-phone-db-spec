@@ -1,0 +1,6 @@
+.DS_Store
+target/
+.claude/.cc-writes/
+.claude/settings.local.json
+journal.md
+drafts/

@@ -1,0 +1,23 @@
+[package]
+name = "order-corpus"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+
+# Order corpus (ADR 0039 item 5 (b)): the same pinned versions and features as in ../icu-pin.
+[dependencies]
+icu_collator = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_collator_data = { version = "=2.4.0", default-features = false }
+icu_collections = { version = "=2.4.0", default-features = false }
+icu_locale = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_locale_core = { version = "=2.4.0", default-features = false }
+icu_locale_data = { version = "=2.4.0", default-features = false }
+icu_locale_fallback = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_locale_fallback_data = { version = "=2.4.0", default-features = false }
+icu_normalizer = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_normalizer_data = { version = "=2.4.0", default-features = false }
+icu_properties = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_properties_data = { version = "=2.4.0", default-features = false }
+icu_provider = { version = "=2.4.0", default-features = false }
+icu_casemap = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_casemap_data = { version = "=2.4.0", default-features = false }

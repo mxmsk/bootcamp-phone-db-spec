@@ -1,0 +1,1 @@
+checked 1112064 scalars; Word_Break mismatches: 0; Extended_Pictographic: 0

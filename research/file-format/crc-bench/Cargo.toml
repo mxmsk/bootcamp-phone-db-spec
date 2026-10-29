@@ -1,0 +1,9 @@
+[package]
+name = "crc-bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crc32c = "=0.6.8"
+crc32fast = "=1.5.3"
+crc = "=3.4.0"

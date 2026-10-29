@@ -1,0 +1,12 @@
+sort_unstable n=32768: 3.10 ms (95 ns/key)
+heap merge n=32768 k=16: 2.36 ms (72 ns/key) out=32768
+heap merge n=32768 k=256: 3.84 ms (117 ns/key) out=32768
+heap merge n=32768 k=4096: 6.61 ms (202 ns/key) out=32768
+sort_unstable n=131072: 7.13 ms (54 ns/key)
+heap merge n=131072 k=16: 7.13 ms (54 ns/key) out=131072
+heap merge n=131072 k=256: 9.82 ms (75 ns/key) out=131072
+heap merge n=131072 k=4096: 12.42 ms (95 ns/key) out=131072
+sort_unstable n=1048576: 36.63 ms (35 ns/key)
+heap merge n=1048576 k=16: 33.87 ms (32 ns/key) out=1048576
+heap merge n=1048576 k=256: 53.01 ms (51 ns/key) out=1048576
+heap merge n=1048576 k=4096: 93.61 ms (89 ns/key) out=1048576

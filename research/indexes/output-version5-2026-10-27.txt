@@ -1,0 +1,53 @@
+== Index size, 10^8 records, 16 KiB page (GB = 1e9 bytes) ==
+page= 8K weak prefix compression  random inserts (0.69)      R   8.1 O  10.4 W+E  22.7 D   0.2 inner   0.2 TOTAL  41.6  levels {'R': 4, 'O': 4, 'W': 4, 'D': 4}
+page= 8K weak prefix compression  after rebuild (0.90)       R   6.2 O   7.9 W+E  17.4 D   0.2 inner   0.1 TOTAL  31.9  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page= 8K medium                   random inserts (0.69)      R   8.1 O   9.5 W+E  20.9 D   0.2 inner   0.2 TOTAL  39.0  levels {'R': 4, 'O': 4, 'W': 4, 'D': 4}
+page= 8K medium                   after rebuild (0.90)       R   6.2 O   7.3 W+E  16.0 D   0.2 inner   0.1 TOTAL  29.8  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page= 8K strong                   random inserts (0.69)      R   8.1 O   8.8 W+E  19.6 D   0.2 inner   0.2 TOTAL  37.0  levels {'R': 4, 'O': 4, 'W': 4, 'D': 4}
+page= 8K strong                   after rebuild (0.90)       R   6.2 O   6.8 W+E  15.0 D   0.2 inner   0.1 TOTAL  28.3  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K weak prefix compression  random inserts (0.69)      R   8.1 O  10.4 W+E  22.7 D   0.2 inner   0.1 TOTAL  41.5  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K weak prefix compression  after rebuild (0.90)       R   6.2 O   7.9 W+E  17.4 D   0.2 inner   0.1 TOTAL  31.8  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K medium                   random inserts (0.69)      R   8.1 O   9.5 W+E  20.9 D   0.2 inner   0.1 TOTAL  38.9  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K medium                   after rebuild (0.90)       R   6.2 O   7.3 W+E  16.0 D   0.2 inner   0.1 TOTAL  29.8  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K strong                   random inserts (0.69)      R   8.1 O   8.8 W+E  19.6 D   0.2 inner   0.1 TOTAL  36.9  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+page=16K strong                   after rebuild (0.90)       R   6.2 O   6.8 W+E  15.0 D   0.2 inner   0.1 TOTAL  28.3  levels {'R': 4, 'O': 4, 'W': 4, 'D': 3}
+
+== Sensitivity to records per number and to name length (page 16K, medium compression, fill 0.69) ==
+records per number 1.0: total   39.3 GB
+records per number 1.25: total   38.9 GB
+records per number 2.0: total   38.2 GB
+records per number 4.0: total   37.7 GB
+name 20 B, sort key 18 B: total   29.2 GB
+name 34 B, sort key 30 B: total   38.9 GB
+name 68 B, sort key 60 B: total   62.7 GB
+name 120 B, sort key 100 B: total   96.4 GB
+words per name 1.5: total   33.2 GB
+words per name 2.5: total   38.9 GB
+words per name 4.0: total   47.3 GB
+
+== Worst case of a single record (maximum allowed name is 200 chars) ==
+200 Han chars, each one a word: order key 902 B, postings 200, total per record without compression ~179.4 KiB (typical ~283 B)
+200 chars U+FDFA (one word): order key 8526 B, postings 1, total per record without compression ~25.9 KiB (typical ~283 B)
+200 Cyrillic chars in 40 words: order key 360 B, postings 40, total per record without compression ~15.4 KiB (typical ~283 B)
+
+== Page reads (cold cache; internal pages are cached) ==
+levels: {'R': 4, 'O': 4, 'W': 4, 'D': 3}  internal pages, MiB: {'R': 22, 'O': 26, 'W': 57, 'D': 1}
+W postings per page ~289; O records per page ~177; R records per page ~256
+M1=131072: G1 reads 453 pages (4.9 MiB); G2 boundary: expected 38147 O records = 215 pages
+
+time model: sequential page 8 us, random read 100 us (QD1), 8 in parallel; CPU: merge/check ~100 ns per record
+Lookup by number, <=10 records                                 seq.pages         1 rand.rd       2  time      0.0..     0.2 ms
+Number with 2,967,164 records (stream)                         seq.pages     11594 rand.rd       0  time    389.5..   389.5 ms
+Exact search, page of 50 (W descent + 50 R reads)              seq.pages         2 rand.rd      52  time      0.7..     5.2 ms
+Word, C=100 (G1)                                               seq.pages         1 rand.rd      54  time      0.7..     5.4 ms
+Word, C=10^4 (G1)                                              seq.pages        35 rand.rd      54  time      2.0..     6.7 ms
+Word, C=M1=131072 (G1, boundary)                               seq.pages       453 rand.rd      54  time     17.4..    22.1 ms
+Word, C=M1+1 (G2, boundary)                                    seq.pages       215 rand.rd      54  time      6.2..    10.9 ms
+Word, C=10^6 (G2)                                              seq.pages        28 rand.rd      54  time      1.4..     6.1 ms
+Prefix of 1 char, C=1.7e7 (G2)                                 seq.pages         2 rand.rd      54  time      0.7..     5.4 ms
+Two words, C=1e3 and 6e5 (G1 + check of 1000 O records)        seq.pages         3 rand.rd    1056  time     13.3..   105.7 ms
+Two frequent words, C=3e6+3e6, empty intersection (G3)         seq.pages     20727 rand.rd     100  time    767.1..   775.8 ms
+All prefixes k>1024, empty intersection (whole O)              seq.pages    563903 rand.rd       0  time  14511.2.. 14511.2 ms
+Query of 200 Han chars: count of 200 prefixes (D) + G1         seq.pages         5 rand.rd     455  time      6.2..    46.0 ms
+
+Rebuild of O+W+E from R (estimate): CPU keys ~5 us per record /8 cores: 1.0 min; external sort ~ 0.7 min at 2 GB/s (2 read+write passes)

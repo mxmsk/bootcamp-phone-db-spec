@@ -1,0 +1,75 @@
+colon between letters (ASCII)            [non_complex] "Smith:John"*
+colon between letters (ASCII)            [auto       ] "Smith:John"*
+colon between letters (Cyrillic)         [non_complex] "Ann:Иван"*
+colon between letters (Cyrillic)         [auto       ] "Ann:Иван"*
+U+FE55 between letters                   [non_complex] "ab﹕cd"*
+U+FE55 between letters                   [auto       ] "ab﹕cd"*
+U+FF1A between letters                   [non_complex] "ab：cd"*
+U+FF1A between letters                   [auto       ] "ab：cd"*
+underscore                               [non_complex] "john_smith"*
+underscore                               [auto       ] "john_smith"*
+U+00B7 between letters                   [non_complex] "Ann·Bob"*
+U+00B7 between letters                   [auto       ] "Ann·Bob"*
+U+2018 between letters                   [non_complex] "ab‘cd"*
+U+2018 between letters                   [auto       ] "ab‘cd"*
+U+2019 between letters                   [non_complex] "O’Brien"*
+U+2019 between letters                   [auto       ] "O’Brien"*
+U+0027 between letters                   [non_complex] "O'Brien"*
+U+0027 between letters                   [auto       ] "O'Brien"*
+U+FF07 between letters                   [non_complex] "ab＇cd"*
+U+FF07 between letters                   [auto       ] "ab＇cd"*
+dot between letters                      [non_complex] "Smith.John"*
+dot between letters                      [auto       ] "Smith.John"*
+U+2027 between letters                   [non_complex] "ab‧cd"*
+U+2027 between letters                   [auto       ] "ab‧cd"*
+U+0387 between letters                   [non_complex] "αβ·γδ"*
+U+0387 between letters                   [auto       ] "αβ·γδ"*
+hyphen                                   [non_complex] "Anna"* | "-" | "Maria"*
+hyphen                                   [auto       ] "Anna"* | "-" | "Maria"*
+digits+letters                           [non_complex] "Agent"* | " " | "007b"*
+digits+letters                           [auto       ] "Agent"* | " " | "007b"*
+R2-D2                                    [non_complex] "R2"* | "-" | "D2"*
+R2-D2                                    [auto       ] "R2"* | "-" | "D2"*
+numbers 3,456.7                          [non_complex] "3,456.7"*
+numbers 3,456.7                          [auto       ] "3,456.7"*
+CJK 李雷                                   [non_complex] "李雷"*
+CJK 李雷                                   [auto       ] "李"* | "雷"*
+CJK 李雷 韩梅梅                               [non_complex] "李雷"* | " " | "韩梅梅"*
+CJK 李雷 韩梅梅                               [auto       ] "李"* | "雷"* | " " | "韩"* | "梅"* | "梅"*
+hiragana+kanji                           [non_complex] "こんにちは世界"*
+hiragana+kanji                           [auto       ] "こんにちは"* | "世界"*
+only hiragana                            [non_complex] "こんにちは"*
+only hiragana                            [auto       ] "こんにちは"*
+katakana                                 [non_complex] "コンピュータ"*
+katakana                                 [auto       ] "コンピュータ"*
+Thai                                     [non_complex] "สว\u{e31}สด\u{e35}คร\u{e31}บ"*
+Thai                                     [auto       ] "สว\u{e31}ส"* | "ด\u{e35}"* | "คร\u{e31}บ"*
+Hebrew                                   [non_complex] "שלום"* | " " | "עולם"*
+Hebrew                                   [auto       ] "שלום"* | " " | "עולם"*
+Hebrew with apostrophe                   [non_complex] "ג'ינס"*
+Hebrew with apostrophe                   [auto       ] "ג'ינס"*
+Hebrew gershayim                         [non_complex] "צה\"ל"*
+Hebrew gershayim                         [auto       ] "צה\"ל"*
+Cyrillic                                 [non_complex] "Иван"* | " " | "Петров"*
+Cyrillic                                 [auto       ] "Иван"* | " " | "Петров"*
+«й» and «ё»                              [non_complex] "Ёлка"* | " " | "Майя"*
+«й» and «ё»                              [auto       ] "Ёлка"* | " " | "Майя"*
+emoji                                    [non_complex] "ab"* | "😀" | "cd"*
+emoji                                    [auto       ] "ab"* | "😀" | "cd"*
+CJK+Latin joined                         [non_complex] "李雷"* | "Smith"*
+CJK+Latin joined                         [auto       ] "李"* | "雷"* | "Smith"*
+Latin+CJK joined                         [non_complex] "Smith"* | "李雷"*
+Latin+CJK joined                         [auto       ] "Smith"* | "李"* | "雷"*
+CJK+digit                                [non_complex] "李雷"* | "2"*
+CJK+digit                                [auto       ] "李"* | "雷"* | "2"*
+kana+kanji+katakana                      [non_complex] "東京"* | "タワー"*
+kana+kanji+katakana                      [auto       ] "東京"* | "タワー"*
+Thai+Latin                               [non_complex] "Somchai"* | " " | "สมชาย"*
+Thai+Latin                               [auto       ] "Somchai"* | " " | "สมชาย"*
+Lao                                      [non_complex] "ສະບາຍດ\u{eb5}"*
+Lao                                      [auto       ] "ສະບາຍ"* | "ດ\u{eb5}"*
+Khmer                                    [non_complex] "ស\u{17bd}ស\u{17d2}ត\u{17b8}"*
+Khmer                                    [auto       ] "ស\u{17bd}ស\u{17d2}ត\u{17b8}"*
+Hangul                                   [non_complex] "김철수"* | " " | "이영희"*
+Hangul                                   [auto       ] "김철수"* | " " | "이영희"*
+(* = word-like)

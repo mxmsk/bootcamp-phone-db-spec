@@ -1,0 +1,1 @@
+checked 1112064 scalars; General_Category mismatches: 0; «word» predicate (not Z*/P*/Cc/Cf) mismatches: 0; White_Space: 0; Cc: 65

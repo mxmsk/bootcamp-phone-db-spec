@@ -1,0 +1,21 @@
+scalars 1112064; mismatches of the «word» predicate (not Z*/P*/Cc/Cf) vs is_word_like (single scalar):
+  ConnectorPunctuation word=false ICU4X word-like=true: 10
+  CurrencySymbol word=true ICU4X word-like=false: 67
+  DashPunctuation word=false ICU4X word-like=true: 2
+  EnclosingMark word=true ICU4X word-like=false: 13
+  Format word=false ICU4X word-like=true: 13
+  LetterNumber word=true ICU4X word-like=false: 323
+  LowercaseLetter word=true ICU4X word-like=false: 84
+  MathSymbol word=true ICU4X word-like=false: 1005
+  ModifierLetter word=true ICU4X word-like=false: 65
+  ModifierSymbol word=true ICU4X word-like=false: 67
+  NonspacingMark word=true ICU4X word-like=false: 1957
+  OtherLetter word=true ICU4X word-like=false: 20260
+  OtherNumber word=true ICU4X word-like=false: 912
+  OtherPunctuation word=false ICU4X word-like=true: 22
+  OtherSymbol word=true ICU4X word-like=false: 6963
+  PrivateUse word=true ICU4X word-like=false: 137468
+  SpaceSeparator word=false ICU4X word-like=true: 1
+  SpacingMark word=true ICU4X word-like=false: 417
+  Unassigned word=true ICU4X word-like=false: 801723
+  UppercaseLetter word=true ICU4X word-like=false: 20

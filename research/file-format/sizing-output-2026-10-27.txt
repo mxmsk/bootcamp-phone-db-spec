@@ -1,0 +1,56 @@
+== A. Leaf fill factor under random inserts (a model, not a real DB) ==
+  cell size ~N(58,25): fill factor 0.669, leaves 3329
+  cell size ~N(49,20): fill factor 0.712, leaves 2660
+  cell size ~N(65,30): fill factor 0.679, leaves 3665
+  cell size ~N(120,80): fill factor 0.693, leaves 6638
+
+== B. Size for 10^8 records under the ADR 0045 layout, profile P0: name 22 chars (42.1 bytes), sort key 35.2, 2.5 words ==
+   (fill 0.67; internal nodes +1.5%; number version 5 bytes)
+  without prefix compression: 404 B/record, file 61.2 GB
+      R records              56.2 B/record
+      R number headers       15.3 B/record
+      O order                93.8 B/record
+      W words               175.8 B/record
+      W whole name           60.3 B/record
+      D dictionary            2.3 B/record
+
+== B2. Sensitivity to fill factor and prefix compression, GB ==
+  fill  | compr. 0   0.1    0.25   0.45   0.6
+  0.67  |  61.2   57.8   52.8   46.2   41.2
+  0.71  |  57.7   54.6   49.9   43.6   38.9
+  0.90  |  45.5   43.1   39.3   34.4   30.7
+  compression at which the file is exactly 50 GB (fill 0.67): 0.336
+
+== B3. Sensitivity to average name length (fill 0.67, no compression), GB ==
+  chars   name bytes  sort key    words | no compr.    compr. 0.25   compr. 0.45
+     12         22       19.0   1.5  |      34.4         30.4         27.2
+     22         42       35.2   2.5  |      61.2         52.8         46.2
+     40         76       63.0   4.0  |     112.6         94.9         80.8
+    100        190      158.0   8.0  |     352.1        285.4        232.0
+    200        380      316.0  15.0  |    1028.2        811.5        638.0
+
+== B4. Sensitivity to records per number (no compression, P0) ==
+  records per number   1.0: 61.8 GB
+  records per number  1.25: 61.2 GB
+  records per number   3.0: 59.8 GB
+  records per number  10.0: 59.1 GB
+
+== B5. Worst case of a single record under the ADR 0045 layout ==
+  (a) 200 chars U+FDFA, one word: ~27.0 KiB of indexes per record
+  (b) 200 Han words of one char each (sort key ~880 B): ~179.3 KiB of indexes per record
+
+== C. Page capacity 16 KiB (usable 16344 B) ==
+  key    35 B (+11 B tail, +3 cell header): cells that fit 333
+  key   630 B (+11 B tail, +3 cell header): cells that fit 25
+  key  1000 B (+11 B tail, +3 cell header): cells that fit 16
+  key  2000 B (+11 B tail, +3 cell header): cells that fit 8
+  key  2048 B (+11 B tail, +3 cell header): cells that fit 7
+  key  4000 B (+11 B tail, +3 cell header): cells that fit 4
+  key  8513 B (+11 B tail, +3 cell header): cells that fit 1
+  key  9200 B (+11 B tail, +3 cell header): cells that fit 1
+  spill threshold 2048 B: cells >=  7
+== D. Volumes ==
+  internal node: separator ~24 B + 4 B pointer + 3 -> children per node ~ 527
+  40 GB = 2.44 M pages of 16 KiB
+  64 GB = 3.91 M pages of 16 KiB
+  max file with a u32 page number: 64 TiB

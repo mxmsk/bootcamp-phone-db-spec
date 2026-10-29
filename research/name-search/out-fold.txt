@@ -1,0 +1,10 @@
+fold: checked 1112064 code points, mismatches with C+F: 0
+status S entries: 32, T entries: 2
+  S example U+1E9E: fold="ss", S="ß", C+F=Some("ss")
+  S example U+1F88: fold="ἀι", S="ᾀ", C+F=Some("ἀι")
+  S example U+1F89: fold="ἁι", S="ᾁ", C+F=Some("ἁι")
+  ß: "straße" -> "strasse"
+  İ: "İ" -> "i\u{307}"
+  ẞ: "ẞ" -> "ss"
+  Ё: "Ё" -> "ё"
+  ΐ: "ΐ" -> "ι\u{308}\u{301}"

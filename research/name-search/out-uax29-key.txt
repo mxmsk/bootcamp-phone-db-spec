@@ -1,0 +1,6 @@
+Ёлка: key = [U+0435 U+043B U+043A U+0430]; NFC(key) == key: true; key(key) == key: true
+«ё»+U+0308 (NFC: U+0451 U+0308): key = [U+0435 U+0308]; NFC(key) == key: false; key(key) == key: false
+«Ё»+U+0308: key = [U+0435 U+0308]; NFC(key) == key: false; key(key) == key: false
+«е»+U+0308+U+0308: key = [U+0435 U+0308]; NFC(key) == key: false; key(key) == key: false
+single scalars: 1112064, non-idempotent keys: 0
+pairs «char + U+0308/U+0301/U+0323»: non-idempotent keys 2; first example: U+0401 U+0308

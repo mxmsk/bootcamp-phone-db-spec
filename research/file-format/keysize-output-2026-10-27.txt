@@ -1,0 +1,6 @@
+avg chars 22.2, avg name bytes 42.1, avg cmp-key bytes 42.1, avg sort-key bytes 35.2
+sortkey bytes per char: 1.58
+max chars 45 name 62 cmp 62 sort 61
+single x*200 max sort key: 8513 (U+FDFA)
+pairs checked 19200, max mixed key 8513 (U+FDFA/U+FDFA variant 0); exceeding mean-of-singles+8: 2974
+a!=b: max mixed key 7297 (U+FDFA/U+FDFB variant 2); max excess over max(ka,kb): 398 (U+3347/U+327C variant 1 key 2432 max(ka,kb) 2034)

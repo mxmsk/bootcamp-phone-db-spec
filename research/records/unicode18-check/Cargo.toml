@@ -1,0 +1,9 @@
+[package]
+name = "unicode18-check"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+icu_normalizer = "=2.4.0"
+icu_properties = "=2.4.0"
+icu_casemap = "=2.4.0"

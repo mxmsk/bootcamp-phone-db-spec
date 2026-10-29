@@ -1,0 +1,28 @@
+[package]
+name = "name-search-probe"
+version = "0.1.0"
+edition = "2021"
+default-run = "uax29"
+
+
+# Pinned features (as in research/ordering/icu-pin, ADR 0039 item 4): default-features off, compiled_data
+# on, features auto/lstm/unstable off. The uax29 binary (product, variant B) builds with these only.
+# The name-search-probe binary (variant A, cross-check only) requires feature `variant-a` (enables icu_segmenter/auto).
+[features]
+variant-a = ["icu_segmenter/auto"]
+
+[[bin]]
+name = "name-search-probe"
+path = "src/main.rs"
+required-features = ["variant-a"]
+
+[[bin]]
+name = "uax29"
+path = "src/bin/uax29.rs"
+
+[dependencies]
+icu_segmenter = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_casemap = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_locale_core = "=2.4.0"
+icu_properties = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }
+icu_normalizer = { version = "=2.4.0", default-features = false, features = ["compiled_data"] }

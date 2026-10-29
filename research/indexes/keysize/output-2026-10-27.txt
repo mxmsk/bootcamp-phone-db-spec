@@ -1,0 +1,39 @@
+# name	script	chars	name_bytes	cmpkey_bytes	sortkey_bytes	zero	ones
+Иванов Иван Иванович	ru	20	38	38	34	0	2
+Петрова Мария Сергеевна	ru	23	44	44	37	0	2
+Сидоров Александр Владимирович	ru	30	58	58	44	0	2
+Ёлкина Анна	ru	11	21	21	23	0	2
+Мария	ru	5	10	10	11	0	2
+Иван	ru	4	8	8	10	0	2
+Кузнецова Екатерина Дмитриевна	ru	30	58	58	44	0	2
+ООО Ромашка	ru	11	21	21	23	0	2
+Морозов Павел Викторович	ru	24	46	46	38	0	2
+Смирнов А. В.	ru	13	22	22	28	0	2
+Попов Иван	ru	10	19	19	20	0	2
+Новикова-Петрова Ольга Игоревна	ru	31	59	59	50	0	2
+John Smith	la	10	10	10	17	0	2
+Anna-Maria O'Brien	la	18	18	18	31	0	2
+Ann Smith	la	9	9	9	16	0	2
+Michael Johnson	la	15	15	15	22	0	2
+Elizabeth Alexandra Mary Windsor	la	32	32	32	43	0	2
+José García	la	11	13	13	22	0	2
+Bob	la	3	3	3	8	0	2
+Müller Hans-Peter	la	17	18	18	29	0	2
+李雷	cjk	2	6	6	10	0	2
+王小明	cjk	3	9	9	13	0	2
+田中太郎	cjk	4	12	12	16	0	2
+김민준	cjk	3	9	9	14	0	2
+محمد علي	ar	8	15	15	15	0	2
+สมชาย ใจดี	th	10	28	28	17	0	2
+Pizza Ёлка 24/7	mix	15	19	19	27	0	2
+Agent 007b	mix	10	10	10	15	0	2
+# script	count	avg_chars	avg_name_bytes	avg_cmpkey	avg_sortkey	sortkey_per_char
+ar	1	8.0	15.0	15.0	15.0	1.88
+cjk	4	3.0	9.0	9.0	13.2	4.42
+la	8	14.4	14.8	14.8	23.5	1.63
+mix	2	12.5	14.5	14.5	21.0	1.68
+ru	12	17.7	33.7	33.7	30.2	1.71
+th	1	10.0	28.0	28.0	17.0	1.70
+sortkey example Ann: [2b, 45, 45, 01, 07, 01, dc, 06]
+single scalar values: total 1112064, with 0x00 in key 0, ones!=2: 0, hist {2: 1112064}
+pairs from pool of 400: 160000, with 0x00: 0, ones!=2: 0
